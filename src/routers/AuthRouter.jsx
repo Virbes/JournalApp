@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { LoginScreen } from '../components/auth/LoginScreen';
 import { RegisterScreen } from '../components/auth/RegisterScreen';
@@ -8,8 +8,8 @@ export const AuthRouter = () => {
         <div className='auth__main'>
             <div className='auth__box-container'>
                 <Routes>
-                    <Route path='login' element={<LoginScreen />} />
-                    <Route path='register' element={<RegisterScreen />} />
+                    <Route path='/login' element={<LoginScreen />} />
+                    <Route path='/register' element={<RegisterScreen />} />
 
                     <Route path="*" element={<Navigate to="login" />} />
                 </Routes>

@@ -1,6 +1,13 @@
 import { initializeApp } from "firebase/app";
-import { GoogleAuthProvider, getAuth, signInWithPopup, createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
-import 'firebase/firestore';
+import {
+    GoogleAuthProvider,
+    getAuth,
+    signInWithPopup,
+    createUserWithEmailAndPassword,
+    updateProfile,
+    signInWithEmailAndPassword,
+} from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 
 
 // Your web app's Firebase configuration
@@ -16,8 +23,11 @@ const firebaseConfig = {
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
+export const db = getFirestore(app); // Inicializa Firestore
 
 export const googleAuthProvider = new GoogleAuthProvider();
 export const popupGoogle = signInWithPopup;
 export const createUser = createUserWithEmailAndPassword;
-export const updateUser = updateProfile; 
+export const updateUser = updateProfile;
+export const signIn = signInWithEmailAndPassword;
+

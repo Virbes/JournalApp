@@ -5,7 +5,7 @@ import { types } from '../types/types';
  * @uid: jagfd123123
  * @name: 'Francisco'
  */
-export const authReducer = (state = {}, action   ) => {
+export const authReducer = (state = {}, action) => {
 
     switch (action.type) {
         case types.login:
@@ -20,5 +20,5 @@ export const authReducer = (state = {}, action   ) => {
         default:
             return state;
     }
-    
+
 }

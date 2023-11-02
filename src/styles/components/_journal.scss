@@ -45,23 +45,32 @@
     overflow: scroll;
 }
 
+.journal__info {
+    display: flex;
+    width: 100%;
+
+    .journal__entry-picture {
+        width: 75px;
+        height: 75px;
+    }
+
+    .journal__entry-body {
+        padding: 15px 10px 10px 10px;
+        width: 50%;
+    }
+    
+}
+
 .journal__entry {
     display: flex;
+    justify-content: space-between;
     background-color: #fff;
     border-radius: 5px;
     color: $dark-grey;
     margin-bottom: 10px;
+    margin-right: 8px;
     overflow: hidden;
     cursor: pointer;
-}
-
-.journal__entry-picture {
-    width: 70px;
-    height: 70px;
-}
-
-.journal__entry-body {
-    padding: 10px;
 }
 
 .journal__entry-title {
@@ -70,15 +79,16 @@
 }
 
 .journal__entry-content {
-    font-size: 10px;
+    font-size: 11px;
 }
 
-.journal__entry-date-box{
+.journal__entry-date-box {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     padding: 5px;
+    width: 70px;
 }
 
 .journal__entry-date-box span {
